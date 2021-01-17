@@ -1,8 +1,52 @@
 [user]
-	        name = Kazuma Inokuchi
-		email = ddz92478@gmail.com
-[core]
-	        autoCRLF = input
-[help]
-	        autocorrect = 1
+	name = Akihide Ito
+	email = akky.supernova@gmail.com
 
+[color]
+    ui = auto
+
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+    sw = switch
+    typechange = status -s | awk '$1=="T"{print $2}' | xargs git checkout
+    graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+    review = diff origin/master...
+    review-files = diff origin/master... --name-only
+    lg = log --color=always --max-count=10 --oneline origin/master...
+    delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+
+[help]
+    autocorrect = 1
+
+[pager]
+    log  = diff-highlight | less -RX
+    show = diff-highlight | less -RX
+    diff = diff-highlight | less -RX
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[core]
+    autoCRLF = input
+	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore
+	hooksPath = ~/src/github.com/secretlint/git-hooks/hooks
+
+[github]
+	user = AkkyOrz
+
+[ghq]
+	root = ~/go/src
+	root = ~/src
+	protocol = ssh
+
+[hub]
+	protocol = ssh
+
+[pull]
+	rebase = false
