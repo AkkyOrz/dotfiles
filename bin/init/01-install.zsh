@@ -30,6 +30,80 @@ export DEBIAN_FRONTEND=noninteractive
   python3-distutils)
 unset DEBIAN_FRONTEND
 
+
+# =====
+# install Rust
+# =====
+
+cat<<EOF
+
+██████╗ ██╗   ██╗███████╗████████╗
+██╔══██╗██║   ██║██╔════╝╚══██╔══╝
+██████╔╝██║   ██║███████╗   ██║   
+██╔══██╗██║   ██║╚════██║   ██║   
+██║  ██║╚██████╔╝███████║   ██║   
+╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   
+
+EOF
+
+if ! [ type "rustc" > /dev/null 2>&1 ]; then 
+    sudo apt install -y vim git wget curl htop gcc
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    source $HOME/.cargo/env
+fi
+
+
+
+# =====
+# install Rusty Commands
+# =====
+if ! [ type "exa" > /dev/null 2>&1 ]; then cargo install exa; fi
+if ! [ type "batcat" > /dev/null 2>&1 ]; then sudo apt install -y bat fd-find; fi
+if ! [ type "rg" > /dev/null 2>&1 ]; then 
+    wget https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb -P /tmp
+    sudo dpkg -i /tmp/ripgrep_12.1.1_amd64.deb
+fi
+
+
+# =====
+# install Go
+# =====
+
+
+
+
+cat <<EOF
+
+ ██████╗  ██████╗ 
+██╔════╝ ██╔═══██╗
+██║  ███╗██║   ██║
+██║   ██║██║   ██║
+╚██████╔╝╚██████╔╝
+ ╚═════╝  ╚═════╝ 
+                  
+
+EOF
+
+
+if ! [ type "go" > /dev/null 2>&1 ]; then 
+  sudo -E apt install -y software-properties-common apt-transport-https gnupg
+  sudo add-apt-repository ppa:longsleep/golang-backports -y
+  sudo apt -y update
+  # DEBIAN_FRONTEND=noninteractive sudo apt install -y systemd
+  # sudo timedatectl set-timezone Asia/Tokyo
+  sudo apt install -y tzdata
+  sudo apt install -y golang-go
+fi
+
+if ! [ type "ghq" > /dev/null 2>&1 ]; then
+  go get github.com/x-motemen/ghq
+fi
+
+
+
+
+
+
 # =====
 # install zinit (skip recommended plugins)
 # =====
