@@ -1,15 +1,34 @@
 #!/bin/zsh
 
+set -eux pipefail
+
+cat << EOF
+
+
+
+ ██╗ ██████╗       ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+███║██╔═████╗      ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+╚██║██║██╔██║█████╗██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+ ██║████╔╝██║╚════╝██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+ ██║╚██████╔╝      ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+ ╚═╝ ╚═════╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+                                                                         
+
+EOF
+
+
 echo -n "Do you want to run $0?(y/N): "; read -q && echo "" || exit 0
 
 # =====
 # install essentials
 # =====
-(sudo apt install -y -qq build-essential libbz2-dev libdb-dev \
+export DEBIAN_FRONTEND=noninteractive
+(sudo -E apt install -y -qq build-essential libbz2-dev libdb-dev \
   libreadline-dev libffi-dev libgdbm-dev liblzma-dev \
   libncursesw5-dev libsqlite3-dev libssl-dev \
   zlib1g-dev uuid-dev tk-dev \
   python3-distutils)
+unset DEBIAN_FRONTEND
 
 # =====
 # install zinit (skip recommended plugins)
