@@ -34,16 +34,16 @@ cat <<EOF
 
 EOF
 
-# if ! [ -d /tmp/nerd-fonts ] ; then
-#   # export PATH=$PATH:$(go env GOPATH)/bin
-#   sudo apt install git
-#   cd /tmp
-#   git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-#   cd nerd-fonts
-#   ./install.sh
-#   pwd
-#   cd $HOME/dotfiles
-# fi
+if ! [ -d /tmp/nerd-fonts ] ; then
+  # export PATH=$PATH:$(go env GOPATH)/bin
+  sudo apt install git
+  cd /tmp
+  git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+  cd nerd-fonts
+  ./install.sh
+  pwd
+  cd $HOME/dotfiles
+fi
 
 # =====
 # create symlink

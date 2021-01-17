@@ -12,7 +12,7 @@ function select_cdr(){
     zle clear-screen
 }
 zle -N select_cdr
-bindkey "^k^o" select_cdr
+bindkey "^g" select_cdr
 
 function select_ccd(){
     local selected_dir=$(\ls -la | grep "^d" | awk '{ print $9 }' | \

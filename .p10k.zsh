@@ -69,7 +69,15 @@
 
   typeset -g POWERLEVEL9K_HOME_ICON="\ufb26"
 
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir dir_writable_joined custom_git_pair vcs_joined virtualenv)
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    root_indicator 
+    host 
+    dir 
+    dir_writable_joined 
+    custom_git_pair 
+    vcs_joined 
+    virtualenv
+  )
   typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%F{white}\uf101%F{white}'
   typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=' '
 
@@ -93,7 +101,12 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
   typeset -g POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status os_icon time)
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+    command_execution_time 
+    status 
+    os_icon 
+    time
+  )
   typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=' '
   typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='%F{white}\uf104%F{white}'
 

@@ -43,7 +43,7 @@ function all-up(){
     echo "------------------------autoclean done------------------------"
     sudo snap refresh;
     echo "------------------------snap done------------------------"
-    zplug update;
+    zinit update;
     echo "------------------------zplug update done------------------------"
 }
 alias all-up=all-up
