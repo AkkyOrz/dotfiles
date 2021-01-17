@@ -1,6 +1,6 @@
-# Dotfiles for inox-ee
+# Dotfiles for AkkyOrz
 
-![dotfiles](./misc/dotfiles.gif)
+<!-- ![dotfiles](./misc/dotfiles.gif)
 
 ## environments
 
@@ -136,5 +136,5 @@ $ pip install trash-cli
 
 ## Caution!
 
-1. This repository does not preserve `.zhistory`.
-
+1. This repository does not preserve `.zsh_history`.
+ -->
