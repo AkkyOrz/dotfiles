@@ -1,11 +1,49 @@
 #!/bin/zsh
 
+set -eux pipefail
+
+cat <<EOF
+
+
+ ██████╗  ██████╗       ███████╗███████╗████████╗██╗   ██╗██████╗ 
+██╔═████╗██╔═████╗      ██╔════╝██╔════╝╚══██╔══╝██║   ██║██╔══██╗
+██║██╔██║██║██╔██║█████╗███████╗█████╗     ██║   ██║   ██║██████╔╝
+████╔╝██║████╔╝██║╚════╝╚════██║██╔══╝     ██║   ██║   ██║██╔═══╝ 
+╚██████╔╝╚██████╔╝      ███████║███████╗   ██║   ╚██████╔╝██║     
+ ╚═════╝  ╚═════╝       ╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝     
+                                                                  
+
+EOF
+
 echo -n "Do you want to run $0?(y/N): "; read -q && echo "" || exit 0
 
 # =====
-# install powerline fonts
+# install nerd-fonts
 # =====
-echo "\e[33m[WARNING] If you haven't install powerline fonts, please access to https://nerdfonts.com. Download FiraMono Nerd Font and install it.\e[m"
+
+cat <<EOF
+
+
+███╗   ██╗███████╗██████╗ ██████╗       ███████╗ ██████╗ ███╗   ██╗████████╗███████╗
+████╗  ██║██╔════╝██╔══██╗██╔══██╗      ██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝
+██╔██╗ ██║█████╗  ██████╔╝██║  ██║█████╗█████╗  ██║   ██║██╔██╗ ██║   ██║   ███████╗
+██║╚██╗██║██╔══╝  ██╔══██╗██║  ██║╚════╝██╔══╝  ██║   ██║██║╚██╗██║   ██║   ╚════██║
+██║ ╚████║███████╗██║  ██║██████╔╝      ██║     ╚██████╔╝██║ ╚████║   ██║   ███████║
+╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═════╝       ╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                    
+
+EOF
+
+# if ! [ -d /tmp/nerd-fonts ] ; then
+#   # export PATH=$PATH:$(go env GOPATH)/bin
+#   sudo apt install git
+#   cd /tmp
+#   git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+#   cd nerd-fonts
+#   ./install.sh
+#   pwd
+#   cd $HOME/dotfiles
+# fi
 
 # =====
 # create symlink
