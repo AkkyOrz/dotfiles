@@ -2,13 +2,14 @@
 
 ## Zsh-Users
 zinit ice silent
-zinit load zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-syntax-highlighting
 zinit ice silent
-zinit load zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
 zinit ice silent
-zinit load zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
 zinit ice silent
-zinit load zsh-users/zsh-autosuggestions
+zinit light denysdovhan/spaceship-prompt
+zinit ice silent
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 
 ## Prezto
