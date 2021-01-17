@@ -14,3 +14,6 @@ export NVM_DIR="$HOME/.nvm"
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# texlive
+export MANPATH="/usr/local/texlive/2019/texmf-dist/doc/man"
+export INFOPATH="/usr/local/texlive/2019/texmf-dist/doc/info"
