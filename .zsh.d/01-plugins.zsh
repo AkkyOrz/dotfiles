@@ -9,7 +9,6 @@ zinit ice silent
 zinit light zsh-users/zsh-autosuggestions
 zinit ice silent
 zinit light denysdovhan/spaceship-prompt
-zinit ice silent
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 
 ## Prezto

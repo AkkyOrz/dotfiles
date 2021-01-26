@@ -19,20 +19,25 @@ zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
 # history
+
+# history保存先
 export HISTFILE="$HOME/.zsh_history" # Don't forget to give permission `600`
 HISTSIZE=10000
 SAVEHIST=1000000
+HISTORY_IGNORE="(pwd|l|l[sal]|clear|cl)"
 setopt EXTENDED_HISTORY
 setopt hist_ignore_dups
 setopt inc_append_history
+# スペースキーを入れたときhistoryに入れない．
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt hist_no_store
 function history-all { history -E 1 }
 
 
 # 他のzshと履歴を共有
 setopt share_history
 
-# スペースキーを入れたときhistoryに入れない．
-setopt hist_ignore_space
 
 # cd した先のディレクトリをディレクトリスタックに追加する
 # `cd +<Tab>` でディレクトリの履歴が表示され，ソコに移動できる
@@ -46,10 +51,15 @@ setopt AUTO_CD
 setopt AUTO_PARAM_KEYS
 
 
-# history保存先
-export HISTFILE="$HOME/.zsh_history" # Don't forget to give permission `600`
 
 setopt append_history
-setopt hist_no_store
-setopt hist_reduce_blanks
+zshaddhistory() {
+  local line=${1%%$'\n'}
+  local cmd=${line%% *}
+  [[ ${cmd} != (l|l[sal])
+        && ${cmd} != (m|man)
+        && ${cmd} != (pwd)
+        && ${cmd} != (cl|clear)
+  ]]
+}
 
