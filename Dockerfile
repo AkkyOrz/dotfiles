@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt update -y && apt install -y sudo curl
+RUN apt update -y && apt install -y sudo curl git
 # RUN apt update -y && apt install -y git sudo wget zsh &&\
 #     chsh -s $(which zsh)
 

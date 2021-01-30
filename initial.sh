@@ -48,6 +48,7 @@ ZSHENV="$HOME/.zshenv"
 if ! [ -f $ZSHENV ]; then
   echo "export DOTPATH=\$HOME/.dotfiles" >> $ZSHENV
   echo "source \$DOTPATH/.zshenv" >> $ZSHENV
+  echo "source \$DOTPATH/.zshrc" >> $ZSHENV
 fi
 
 # =====

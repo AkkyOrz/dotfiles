@@ -147,7 +147,6 @@ dotfiles_download() {
     # git submodule init
     # git submodule update
     git clone --recursive "$DOTFILES_GITHUB" "$DOTPATH"
-    git switch feature/curl-installer
 
     elif is_exists "curl" || is_exists "wget"; then
     # curl or wget
