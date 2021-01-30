@@ -135,7 +135,7 @@ fi
 # install vim-hybrid
 # =====
 mkdir -p ~/.vim/colors
-(cd $ZDOTDIR/.vim/colors && curl -s -O https://raw.githubusercontent.com/w0ng/vim-hybrid/master/colors/hybrid.vim)
+(cd $DOTPATH/.vim/colors && curl -s -O https://raw.githubusercontent.com/w0ng/vim-hybrid/master/colors/hybrid.vim)
 
 # =====
 # install rbenv

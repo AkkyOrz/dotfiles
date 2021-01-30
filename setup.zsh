@@ -4,7 +4,7 @@
 # continue to setup
 # =====
 
-INIT="${ZDOTDIR}/bin/init"
+INIT="${DOTPATH}/bin/init"
 
 if [ -d $INIT -a -r $INIT -a -x $INIT ]; then
   for i in $INIT/*; do

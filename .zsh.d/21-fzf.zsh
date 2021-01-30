@@ -4,7 +4,7 @@ export FZF_CTRL_T_COMMAND="find . -not -path '*/\.git/*'"
 
 function select_cdr(){
     local selected_dir=$(cdr -l | awk '{ print $2 }' | \
-        fzf --preview 'f() { sh -c "tree -aFC -L 2 $1" }; f {}')
+        fzf --preview 'f() { sh -c "tree -aFC -L 2 $1;"; }; f {}')
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir} && clear"
         zle accept-line
@@ -12,11 +12,11 @@ function select_cdr(){
     zle clear-screen
 }
 zle -N select_cdr
-bindkey "^g" select_cdr
+bindkey "^e" select_cdr
 
 function select_ccd(){
     local selected_dir=$(\ls -la | grep "^d" | awk '{ print $9 }' | \
-      fzf --preview 'f() { sh -c "ls -hFGlA $1" }; f {}')
+      fzf --preview 'f() { sh -c "ls -hFGlA $1;"; }; f {}')
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
         zle accept-line
@@ -30,8 +30,8 @@ bindkey "^k^l" select_ccd
 function select_file_from_git_status() {
   unbuffer git status -u --short | \
     fzf -m --ansi --reverse --preview 'f() {
-      local original=$@
-      set -- $(echo "$@");
+      original=$@;
+      echo $@;
       if [ $(echo $original | grep -E "^M" | wc -l) -eq 1 ]; then # staged
         git diff --color --cached $2
       elif [ $(echo $original | grep -E "^\?\?" | wc -l) -eq 0 ]; then # unstaged

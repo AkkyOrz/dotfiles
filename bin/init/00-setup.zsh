@@ -33,7 +33,6 @@ cat <<EOF
                                                                                     
 
 EOF
-
 if ! [ -d /tmp/nerd-fonts ] ; then
   # export PATH=$PATH:$(go env GOPATH)/bin
   sudo apt install git
@@ -50,6 +49,6 @@ fi
 # =====
 TARGET=(".gitconfig" ".vim" ".tmux.conf")
 for i in $TARGET; do
-  ! [ -h $HOME/$i ] && ln -siv $ZDOTDIR/$i $HOME
+  ! [ -h $HOME/$i ] && ln -siv $DOTPATH/$i $HOME
 done
 

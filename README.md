@@ -1,5 +1,10 @@
 # Dotfiles for AkkyOrz
 
+
+```bash
+curl -L raw.githubusercontent.com/AkkyOrz/dotfiles/master//download.sh | bash
+```
+
 <!-- ![dotfiles](./misc/dotfiles.gif)
 
 ## environments
@@ -98,10 +103,10 @@ $ chsh -s $(which zsh)
 
 ```zsh
 $ git clone git@github.com:inox-ee/dotfiles.git
-$ echo export ZDOTDIR="$HOME/dotfiles"\\nsource $ZDOTDIR/.zshenv\\n > ~/.zshenv
-$ ln -siv $ZDOTDIR/.gitconfig
-$ ln -siv $ZDOTDIR/.vim
-$ ln -siv $ZDOTDIR/.wslconfig
+$ echo export DOTPATH="$HOME/dotfiles"\\nsource $DOTPATH/.zshenv\\n > ~/.zshenv
+$ ln -siv $DOTPATH/.gitconfig
+$ ln -siv $DOTPATH/.vim
+$ ln -siv $DOTPATH/.wslconfig
 ```
 
 2. Install dependencies
@@ -115,7 +120,7 @@ $ ~/.fzf/install
 # # remove _.fzf.zsf_ because it is in dotfiles.
 # install vim-hybrid
 $ mkdir ~/.vim/colors
-$ (cd ~/$ZDOTDIR/.vim/colors && curl -O https://raw.githubusercontent.com/w0ng/vim-hybrid/master/colors/hybrid.vim)
+$ (cd ~/$DOTPATH/.vim/colors && curl -O https://raw.githubusercontent.com/w0ng/vim-hybrid/master/colors/hybrid.vim)
 # install powerline font
 # # Access to https://nerdfonts.com. Download _FiraMono Nerd Font_ and install it.
 # install rbenv

@@ -1,6 +1,6 @@
 # ref: https://qiita.com/Suzuki09/items/80fbf9c6fcffa5c6b6b4
 
-ZSHHOME="${ZDOTDIR}/.zsh.d"
+ZSHHOME="${DOTPATH}/.zsh.d"
 
 if [ -d $ZSHHOME -a -r $ZSHHOME -a \
      -x $ZSHHOME ]; then
