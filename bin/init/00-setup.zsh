@@ -33,7 +33,6 @@ cat <<EOF
                                                                                     
 
 EOF
-kkkkkkkkkkk
 if ! [ -d /tmp/nerd-fonts ] ; then
   # export PATH=$PATH:$(go env GOPATH)/bin
   sudo apt install git
