@@ -26,4 +26,4 @@ autoload -Uz _zinit
 # ColorTheme
 zinit ice silent depth=1; zinit light romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+[[ ! -f $DOTPATH/.p10k.zsh ]] || source $DOTPATH/.p10k.zsh

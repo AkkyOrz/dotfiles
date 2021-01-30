@@ -1,7 +1,7 @@
 # Setting some applications
 
 # fzf
-[ -f $ZDOTDIR/.fzf.zsh ] && source $ZDOTDIR/.fzf.zsh
+[ -f $DOTPATH/.fzf.zsh ] && source $DOTPATH/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 60% --reverse --border'
 
 # rbenv

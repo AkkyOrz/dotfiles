@@ -46,8 +46,8 @@ type zsh > /dev/null 2>&1 || sudo apt install -qq -y zsh
 
 ZSHENV="$HOME/.zshenv"
 if ! [ -f $ZSHENV ]; then
-  echo "export ZDOTDIR=\$HOME/dotfiles" >> $ZSHENV
-  echo "source \$ZDOTDIR/.zshenv" >> $ZSHENV
+  echo "export DOTPATH=\$HOME/.dotfiles" >> $ZSHENV
+  echo "source \$DOTPATH/.zshenv" >> $ZSHENV
 fi
 
 # =====
