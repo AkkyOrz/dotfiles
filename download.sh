@@ -147,10 +147,11 @@ dotfiles_download() {
     # git submodule init
     # git submodule update
     git clone --recursive "$DOTFILES_GITHUB" "$DOTPATH"
+    git switch feature/curl-installer
 
     elif is_exists "curl" || is_exists "wget"; then
     # curl or wget
-    local tarball="https://github.com/hnishi/dotfiles/archive/master.tar.gz"
+    local tarball="https://github.com/AkkyOrz/dotfiles/archive/master.tar.gz"
     if is_exists "curl"; then
     curl -L "$tarball"
 
@@ -180,6 +181,7 @@ dotfiles_download
 
 # Install the dotfiles
 # ==> installing
-cd "${DOTPATH}/scripts"
+cd "${DOTPATH}"
 
-bash install.sh
+./initial.sh
+./setup.zsh
