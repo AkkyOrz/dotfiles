@@ -34,8 +34,11 @@ cat <<EOF
 
 EOF
 if ! [ -d /tmp/nerd-fonts ] ; then
-  # export PATH=$PATH:$(go env GOPATH)/bin
   sudo apt install git
+
+  sudo chmod +x /usr/share/doc/git/contrib/diff-highlight/diff-highlight
+  sudo ln -s /usr/share/doc/git/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
+
   cd /tmp
   git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
   cd nerd-fonts

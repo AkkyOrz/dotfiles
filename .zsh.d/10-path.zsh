@@ -10,5 +10,6 @@ export PATH="$PATH:$HOME/.npm-global/bin"
 export PATH="$PATH:/usr/local/texlive/2019/bin/x86_64-linux"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:/opt/td-agent/embedded/bin/"
+export PATH="$PATH:/opt/td-agent/embedded/bin"
+export PATH="$PATH:/snap/bin"
 
