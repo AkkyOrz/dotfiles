@@ -26,6 +26,9 @@ alias fd=fdfind
 
 alias dc='docker-compose'
 
+# kubernetes
+alias k=kubectl
+
 # file that is deleted by rm command throw into ~/.local/files/Trash/~
 if type trash-put &> /dev/null
 then

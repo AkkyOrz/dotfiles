@@ -21,6 +21,8 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+autoload -Uz compinit
+compinit
 ### End of Zinit's installer chunk
 
 # ColorTheme

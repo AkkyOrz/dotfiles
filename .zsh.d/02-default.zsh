@@ -18,6 +18,8 @@ zstyle ':chpwd:*' recent-dirs-max 100
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':completion:*' recent-dirs-insert both
 
+complete -F __start_kubectl k
+
 # history
 
 # history保存先
