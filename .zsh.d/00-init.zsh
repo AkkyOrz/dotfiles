@@ -21,9 +21,12 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+
+### End of Zinit's installer chunk
+
+source <(kubectl completion zsh)
 autoload -Uz compinit
 compinit
-### End of Zinit's installer chunk
 
 # ColorTheme
 zinit ice silent depth=1; zinit light romkatv/powerlevel10k
