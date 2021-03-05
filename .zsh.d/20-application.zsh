@@ -5,6 +5,7 @@
 export FZF_DEFAULT_OPTS='--height 60% --reverse --border'
 
 # rbenv
+eval "$(anyenv init -)"
 eval "$(rbenv init -)"
 
 # nvm

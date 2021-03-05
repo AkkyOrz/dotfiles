@@ -12,4 +12,5 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/opt/td-agent/embedded/bin"
 export PATH="$PATH:/snap/bin"
+export PATH="$PATH:$HOME/.anyenv/bin"
 

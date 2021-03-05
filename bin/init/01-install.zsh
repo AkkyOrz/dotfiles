@@ -138,11 +138,14 @@ mkdir -p ~/.vim/colors
 (cd $DOTPATH/.vim/colors && curl -s -O https://raw.githubusercontent.com/w0ng/vim-hybrid/master/colors/hybrid.vim)
 
 # =====
-# install rbenv
+# install anyenv
 # =====
-if ! whence -w rbenv; then
-  git clone -q https://github.com/rbenv/rbenv.git $HOME/.rbenv
-  git clone -q https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+if ! whence -w anyenv; then
+  git clone -q https://github.com/anyenv/anyenv ~/.anyenv
+  ~/.anyenv/bin/anyenv init
+  anenv install --init
+  anyenv install rbenv
+  anyenv install goenv
 fi
 
 # =====
